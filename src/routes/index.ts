@@ -1,10 +1,10 @@
 import express from "express";
-import controller from "../controllers/controller";
+import controller from "../controllers";
 const router = express.Router();
 
 /**
  * [START GET ALL]
- * Retrieve all
+ * Retrieve items
  */
 router.get('/', controller.getAll);
 // [END GET ALL]
@@ -17,24 +17,24 @@ router.get('/', controller.getAll);
  // [END POST]
 
  /**
- * [START UPDATE BY ID]
- * Update item by id.
+ * [START UPDATE]
+ * Update item.
  */
-router.get('/:id', controller.updateOne);
-// [END UPDATE BY ID]
+router.put('/:id', controller.updateOne);
+// [END UPDATE]
 
 /**
  * [START GET BY ID]
- * Retrieve item by id.
+ * Retrieve item.
  */
 router.get('/:id', controller.getOne);
 // [END GET BY ID]
 
 /**
- * [START DELETE BY ID]
- * Remove item by id.
+ * [START DELETE]
+ * Remove item.
  */
 router.delete('/:id', controller.deleteOne);
-// [END DELETE BY ID]
+// [END DELETE]
 
 export default router;
